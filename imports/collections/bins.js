@@ -8,6 +8,10 @@ Meteor.methods({
       sharedWith: [],
       ownerId: this.userId  // If they are authenticated....you can use 'this.userId'
     });
+  },
+
+  'bins.remove': function(bin) {
+    return Bins.remove(bin);
   }
 });
 
